@@ -64,5 +64,3 @@ export const DIALOG_CONFIG = {
     disableClose: false,
   }
 }
-
-const validVideoExtensions = ['.mp4', '.mkv', '.avi', '.mov', '.wmv', '.flv', '.webm', '.m4v', '.3gp', '.mpeg', '.mpg', '.ogg'];
