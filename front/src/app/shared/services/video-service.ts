@@ -29,7 +29,7 @@ export class VideoService {
   }
 
   updateVideoByAdmin(id:string | number, patch:any) {
-    return this.http.patch(this.apiUrlAdmin + '/' + id,patch);
+    return this.http.put(this.apiUrlAdmin + '/' + id,patch);
   }
 
   deleteVideoByAdmin(id:string | number) {
