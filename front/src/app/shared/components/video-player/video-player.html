@@ -6,7 +6,7 @@
   <video #videoPlayer [src]="videoSrc" (loadedmetadata)="onLoadedMetadata()"
          (timeupdate)="onTimeUpdate()" (click)="onVideoClick()" (play)="isPlaying = true"
          (pause)="isPlaying=false" (ended)="isPlaying = false" preload="metadata" playsinline
-         class="video-element"></video>
+         loop class="video-element"></video>
 
   <div class="player-overlay" [class.hidden]="!showControls">
     <div class="top-bar">
