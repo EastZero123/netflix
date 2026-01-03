@@ -132,6 +132,8 @@ export class ManageVideo implements OnInit {
         if(uuid) {
           this.videoForm.patchValue({src: uuid});
           this.notification.success('Video uploaded successfully.');
+
+          this.cdr.detectChanges();
         }
       },
       error: (err) => {
@@ -149,7 +151,7 @@ export class ManageVideo implements OnInit {
     const file = (ev.target as HTMLInputElement).files?.[0];
     if(!file) return;
 
-    if(!file.type.startsWith('/image')){
+    if(!file.type.startsWith('image')){
       this.notification.error('Please specify a valid extension');
       return;
     }
@@ -170,6 +172,8 @@ export class ManageVideo implements OnInit {
           this.videoForm.patchValue({poster: uuid});
           this.notification.success('Poster uploaded successfully.');
         }
+
+        this.cdr.detectChanges();
       },
       error: (err) => {
         this.notification.error('Poster upload failed.');
